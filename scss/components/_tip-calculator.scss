@@ -1,0 +1,19 @@
+@use '../abstracts/' as a;
+
+.tip-calculator {
+    width: 100%;
+    max-width: a.rem(920);
+
+    padding: a.rem(32) a.rem(24);
+
+    border-top-left-radius: a.rem(25);
+    border-top-right-radius: a.rem(25);
+
+    background-color: white;
+
+    @media all and (min-width: 768px) {
+        padding: a.rem(32);
+        border-radius: a.rem(25);
+    }
+
+}

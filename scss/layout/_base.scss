@@ -1,0 +1,16 @@
+@use '../abstracts/' as a;
+
+body {
+    @include a.add-flex(column, 
+            $align-items: center, 
+            $gap: clamp(a.rem(40), a.rem(32) + 2vw, a.rem(88)));
+    
+    @media all and (min-width: 768px) {
+        justify-content: center;
+    }
+    background-color: a.$primary-background;
+}
+
+header {
+    padding-top: a.rem(50);
+}
