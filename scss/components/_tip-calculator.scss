@@ -90,7 +90,10 @@
             input {
                 padding-left: a.rem(18);
             }
-    
+        }
+
+        @media all and (min-width: 768px) {
+            gap: a.rem(40);
         }
     }
 
@@ -150,7 +153,10 @@
 
     @media all and (min-width: 768px) {
         padding: a.rem(32);
+        gap: a.rem(40);
         flex-direction: row;
+
+        box-shadow: 0 32px 43px 0 a.$box-shadow-color;
 
         > * {
             width: calc(100% / 2 - (a.rem(32) / 2));;
