@@ -9,8 +9,15 @@ body {
         justify-content: center;
     }
     background-color: a.$primary-background;
+    font-family: 'Space Mono', sans-serif;
 }
 
 header {
     padding-top: a.rem(50);
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

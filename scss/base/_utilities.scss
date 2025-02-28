@@ -1,0 +1,10 @@
+@use '../abstracts/' as a;
+
+.hidden {
+    display: none;
+}
+
+.error {
+    margin-left: auto;
+    color: a.$error-color !important;
+}

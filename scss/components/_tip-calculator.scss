@@ -6,14 +6,127 @@
 
     padding: a.rem(32) a.rem(24);
 
-    border-top-left-radius: a.rem(25);
-    border-top-right-radius: a.rem(25);
+    border-radius: a.rem(25);
 
     background-color: white;
 
+    @include a.add-flex(column, $align-items: stretch, $gap: a.rem(32));
+    
+    label, span {
+        color: a.$label-color;
+    }
+
+    label {
+        display: flex;
+    }
+
+    input {
+        font-size: a.rem(24);
+        color: #00474B;
+        background-color: rgba(158, 187, 189, 7%);
+    }
+
+    &__input {
+
+        @include a.add-flex(column, $gap: a.rem(32));
+
+        > * {
+            @include a.add-flex(column, $gap: a.rem(6));
+        }
+
+        &-container {
+            background-color: rgba(158, 187, 189, 5%);
+            border-radius: a.rem(5);
+            position: relative;
+
+            svg {
+                position: absolute;
+                left: 3%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            input {
+                padding-left: 10%;
+            }
+
+        }
+
+        &-select-tip {
+    
+            @include a.add-flex(row, flex-start, stretch, a.rem(14), wrap);
+
+            button, input {
+                width: calc(100% / 2 - (a.rem(14) / 2));
+                font-size: a.rem(24);
+
+                @media all and (min-width: 768px) {
+                    width: calc(100% / 3 - (a.rem(14) * 2 / 3));
+                }
+            }
+
+            button {
+                padding: a.rem(8) 0;
+                border-radius: a.rem(5);
+                background-color: a.$tip-selector-button-color;
+                color: white;
+            }
+    
+        }
+    }
+
+    &__result {
+        background-color: #00474B;
+        padding: a.rem(36) a.rem(24);
+        border-radius: a.rem(16);
+
+        @include a.add-flex(column, $gap: a.rem(20));
+
+        &-amount {
+            @include a.add-flex(row, space-between);
+
+            &__label {
+
+                align-self: center;
+
+                &-main {
+                    display: block;
+                    font-size: a.rem(16); 
+                    color: white !important;
+                }
+
+                &-sub {
+                    display: block;
+                    font-size: a.rem(13); 
+                    color: #7F9D9F !important;
+                }
+            }
+
+            &__value {
+                font-size: a.rem(48);
+                color: #26C2AE !important;
+            }
+
+        }
+
+        button {
+            padding: a.rem(8) 0;
+            border-radius: a.rem(5);
+            background-color: #26C2AE;
+            font-size: a.rem(20);
+            text-transform: uppercase;
+            margin-top: auto;
+        }
+    }
+
+
     @media all and (min-width: 768px) {
         padding: a.rem(32);
-        border-radius: a.rem(25);
+        flex-direction: row;
+
+        > * {
+            width: calc(100% / 2 - (a.rem(32) / 2));;
+        }
     }
 
 }

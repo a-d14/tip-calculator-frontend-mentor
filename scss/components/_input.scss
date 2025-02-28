@@ -1,0 +1,10 @@
+@use '../abstracts/' as a;
+
+input {
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: a.rem(6) a.rem(18);
+    border-radius: a.rem(5);
+    background-color: inherit;
+}
