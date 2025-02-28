@@ -16,7 +16,7 @@
         color: a.$label-color;
     }
 
-    label {
+   .label {
         display: flex;
     }
 
@@ -51,7 +51,7 @@
         }
 
         &-currency,
-        &-tip-selector,
+        &-tip,
         &-people {
             background-color: rgba(158, 187, 189, 5%);
             border-radius: a.rem(5);
@@ -76,6 +76,15 @@
                 border-radius: a.rem(5);
                 background-color: a.$tip-selector-button-color;
                 color: white;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: a.$button-hover-color;
+                }
+
+                &.active {
+                    background-color: a.$button-active-color;
+                }
             }
 
             input {
@@ -122,7 +131,7 @@
         button {
             padding: a.rem(8) 0;
             border-radius: a.rem(5);
-            background-color: #26C2AE;
+            background-color: a.$button-active-color;
             font-size: a.rem(20);
             text-transform: uppercase;
             margin-top: auto;
@@ -131,7 +140,8 @@
                 background-color: a.$button-disabled-color;
             }
 
-            &:hover {
+            &:hover:not(:disabled) {
+                cursor: pointer;
                 background-color: a.$button-hover-color;
             }
         }

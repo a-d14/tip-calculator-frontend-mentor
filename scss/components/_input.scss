@@ -7,4 +7,16 @@ input {
     padding: a.rem(6) a.rem(18);
     border-radius: a.rem(5);
     background-color: inherit;
+
+    &.error {
+        border: 2px solid a.$error-color;
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
 }
