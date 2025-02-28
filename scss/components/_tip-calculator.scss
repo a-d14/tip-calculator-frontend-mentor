@@ -35,8 +35,6 @@
         }
 
         &-container {
-            background-color: rgba(158, 187, 189, 5%);
-            border-radius: a.rem(5);
             position: relative;
 
             svg {
@@ -51,6 +49,14 @@
             }
 
         }
+
+        &-currency,
+        &-tip-selector,
+        &-people {
+            background-color: rgba(158, 187, 189, 5%);
+            border-radius: a.rem(5);
+        }
+
 
         &-select-tip {
     
@@ -70,6 +76,10 @@
                 border-radius: a.rem(5);
                 background-color: a.$tip-selector-button-color;
                 color: white;
+            }
+
+            input {
+                padding-left: a.rem(18);
             }
     
         }
@@ -116,6 +126,14 @@
             font-size: a.rem(20);
             text-transform: uppercase;
             margin-top: auto;
+
+            &[disabled] {
+                background-color: a.$button-disabled-color;
+            }
+
+            &:hover {
+                background-color: a.$button-hover-color;
+            }
         }
     }
 
