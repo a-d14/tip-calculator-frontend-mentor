@@ -134,6 +134,7 @@ document.querySelector(".tip-calculator__input-select-tip").addEventListener('cl
     if(e.target.tagName === 'BUTTON') {
         e.target.classList.add('active');
         tip = +e.target.textContent.replace(/\D/g,'');
+        displayOutput();
     }
 });
 
@@ -141,6 +142,10 @@ resetButton.addEventListener('click', () => {
     amountInput.value = '';
     tipInput.value = '';
     peopleInput.value = '';
+
+    billAmount = -1;
+    tip = 0;
+    numberOfPeople = 0;
 
     document.querySelectorAll(".tip-calculator__input-select-tip button").forEach((el) => {
         el.classList.remove('active');
